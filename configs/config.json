@@ -1,0 +1,32 @@
+{
+    "ablation_A": [
+        {"name": "A1_full_default",  "schedule": "default", "active_pairs": {"near": true, "mid_near": true,  "further": true},  "init": "pca"},
+        {"name": "A2_no_midnear",   "schedule": "default", "active_pairs": {"near": true, "mid_near": false, "further": true},  "init": "pca"},
+        {"name": "A3_no_further",   "schedule": "default", "active_pairs": {"near": true, "mid_near": true,  "further": false}, "init": "pca"},
+        {"name": "A4_only_near",    "schedule": "default", "active_pairs": {"near": true, "mid_near": false, "further": false}, "init": "pca"},
+        {"name": "A5_no_near",      "schedule": "default", "active_pairs": {"near": false,"mid_near": true,  "further": true},  "init": "pca"}
+    ],
+    "ablation_A_rand": [
+        {"name": "A1r_full_default_rand", "schedule": "default", "active_pairs": {"near": true, "mid_near": true,  "further": true},  "init": "random"},
+        {"name": "A2r_no_midnear_rand",  "schedule": "default", "active_pairs": {"near": true, "mid_near": false, "further": true},  "init": "random"},
+        {"name": "A3r_no_further_rand",  "schedule": "default", "active_pairs": {"near": true, "mid_near": true,  "further": false}, "init": "random"},
+        {"name": "A4r_only_near_rand",   "schedule": "default", "active_pairs": {"near": true, "mid_near": false, "further": false}, "init": "random"},
+        {"name": "A5r_no_near_rand",     "schedule": "default", "active_pairs": {"near": false,"mid_near": true,  "further": true},  "init": "random"}
+    ],
+    "ablation_C": [
+        {"name": "C1_default_schedule",  "schedule": "default",         "active_pairs": {"near": true, "mid_near": true, "further": true}, "init": "pca"},
+        {"name": "C2_constant_low",      "schedule": "constant_low",    "active_pairs": {"near": true, "mid_near": true, "further": true}, "init": "pca"},
+        {"name": "C3_constant_zero_mn",  "schedule": "constant_zero_mn","active_pairs": {"near": true, "mid_near": true, "further": true}, "init": "pca"},
+        {"name": "C4_no_phase1",         "schedule": "no_phase1",       "active_pairs": {"near": true, "mid_near": true, "further": true}, "init": "pca"},
+        {"name": "C5_no_phase3",         "schedule": "no_phase3",       "active_pairs": {"near": true, "mid_near": true, "further": true}, "init": "pca"},
+        {"name": "C6_reversed",          "schedule": "reversed",        "active_pairs": {"near": true, "mid_near": true, "further": true}, "init": "pca"}
+    ],
+    "ablation_C_rand": [
+        {"name": "C1r_default_rand",         "schedule": "default",         "active_pairs": {"near": true, "mid_near": true, "further": true}, "init": "random"},
+        {"name": "C2r_constant_low_rand",    "schedule": "constant_low",    "active_pairs": {"near": true, "mid_near": true, "further": true}, "init": "random"},
+        {"name": "C3r_constant_zero_mn_rand","schedule": "constant_zero_mn","active_pairs": {"near": true, "mid_near": true, "further": true}, "init": "random"},
+        {"name": "C4r_no_phase1_rand",       "schedule": "no_phase1",       "active_pairs": {"near": true, "mid_near": true, "further": true}, "init": "random"},
+        {"name": "C5r_no_phase3_rand",       "schedule": "no_phase3",       "active_pairs": {"near": true, "mid_near": true, "further": true}, "init": "random"},
+        {"name": "C6r_reversed_rand",        "schedule": "reversed",        "active_pairs": {"near": true, "mid_near": true, "further": true}, "init": "random"}
+    ]
+}
