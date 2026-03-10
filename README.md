@@ -1,6 +1,6 @@
 # PaCMAP Experiments
 
-These experiments on PaCMAP [1] investigate the role of each pair type and the dynamic weight schedule.
+These experiments on [PaCMAP](https://github.com/YingfanWang/PaCMAP) [1] investigate the role of each pair type and the dynamic weight schedule.
 
 ## Structure of the code
 
@@ -26,7 +26,7 @@ Each configuration is run with both PCA and random initialization on the Mammoth
 
 ## Method
 
-We wrap the original PaCMAP library and patch only the find_weight function. The optimizer, gradient computation, and all numba-compiled code remain untouched. Pair types are disabled by setting their weight to zero;  pairs are still sampled, but contribute no gradient.
+We wrap the original PaCMAP library and patch only the `find_weight` function. The optimizer, gradient computation, and all numba-compiled code remain untouched. Pair types are disabled by setting their weight to zero;  pairs are still sampled, but contribute no gradient.
 
 
 ## Metrics
