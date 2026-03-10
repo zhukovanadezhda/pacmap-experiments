@@ -31,9 +31,17 @@ We wrap the original PaCMAP library and patch only the find_weight function. The
 
 ## Metrics
 
-Random Triplet Accuracy — global structure: fraction of random triplets whose distance ordering is preserved  
-Neighbor Preservation (k=10) — local structure: fraction of k-NN overlap between high-D and 2D
+**Random Triplet Accuracy** (global structure): sample $T$ random triplets $(i, j, k)$ and check if the distance ordering is preserved:
 
+$$\text{RTA} = \frac{1}{T} \sum_{t=1}^{T} \mathbb{1}\left[\left(d^H_{ij} < d^H_{ik}\right) = \left(d^L_{ij} < d^L_{ik}\right)\right]$$
+
+where $d^H$ and $d^L$ are squared Euclidean distances in high-D and low-D, respectively. A score of 0.5 = random chance.
+
+**Neighbor Preservation** (local structure, $k=10$): fraction of $k$-nearest neighbors preserved in the embedding:
+
+$$\text{NP}_k = \frac{1}{N} \sum_{i=1}^{N} \frac{\left| \mathcal{N}_k^H(i) \cap \mathcal{N}_k^L(i) \right|}{k}$$
+
+where $\mathcal{N}_k^H(i)$ and $\mathcal{N}_k^L(i)$ are the $k$-nearest neighbor sets of point $i$ in high-D and low-D.
 
 ## Usage
 
