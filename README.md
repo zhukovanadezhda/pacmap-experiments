@@ -1,6 +1,6 @@
 # PaCMAP Experiments
 
-These experiments on PaCMAP (Wang et al., JMLR 2021) investigate the role of each pair type and the dynamic weight schedule.
+These experiments on PaCMAP [1] investigate the role of each pair type and the dynamic weight schedule.
 
 ## Structure of the code
 
@@ -21,7 +21,7 @@ These experiments on PaCMAP (Wang et al., JMLR 2021) investigate the role of eac
 1. Pair types: disables near, mid-near, or further pairs by zeroing their weight in the loss function.  
 2. Weight schedule: replaces the default 3-phase schedule (1000→3→0) with alternatives (constant, no phase 1, no phase 3, reversed).
    
-Each configuration is run with both PCA and random initialization on the Mammoth dataset (10K points, 3D).
+Each configuration is run with both PCA and random initialization on the Mammoth dataset (10K points, 3D) [2].
 
 
 ## Method
@@ -47,4 +47,6 @@ Outputs: `results/` (pickle files) and `figures/` (PNG plots).
 
 ## Reference
 
-Wang, Y., Huang, H., Rudin, C., & Shaposhnik, Y. (2021). Understanding How Dimension Reduction Tools Work: An Empirical Approach to Deciphering t-SNE, UMAP, TriMAP, and PaCMAP for Data Visualization. JMLR, 22(201), 1–73.
+[1] *Wang, Y., Huang, H., Rudin, C., & Shaposhnik, Y. (2021).* Understanding How Dimension Reduction Tools Work: An Empirical Approach to Deciphering t-SNE, UMAP, TriMAP, and PaCMAP for Data Visualization. JMLR, 22(201), 1–73.
+
+[2] Smithsonian Institution. Mammuthus primigenius (Blumbach), 2020. https://3d.si.edu/object/3d/mammuthus-primigenius-blumbach:341c96cd-f967-4540-8ed1-d3fc56d31f12.
