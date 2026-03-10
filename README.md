@@ -16,6 +16,16 @@ These experiments on [PaCMAP](https://github.com/YingfanWang/PaCMAP) [1] investi
 └── README.md
 ```
 
+
+`pacmap_source.py` - Local copy of the [original PaCMAP library code](https://github.com/YingfanWang/PaCMAP). **This file is not our work**  
+
+`pacmap_core.py` - A script that helps to run PaCMAP with different configurations of weight schedules (since the original API doesn't support this). It includes definitions for weight schedules, evaluation metrics and I/O helpers.  
+
+`plot_results.py` - Plots a bar chart comparing final metrics across configurations as well as grids of scatter plots for the embeddings at each iteration.  
+
+`run_ablations.py` - Main script that loads loads the Mammoth dataset and configurations from `configs/config.json`, runs all experiments, saves results to `results/`, and generates figures (`figures/`). Each experiment is run with both PCA and random initialization.
+
+
 ## Experiments
 
 1. Pair types: disables near, mid-near, or further pairs by zeroing their weight in the loss function.  
